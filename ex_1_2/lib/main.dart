@@ -65,6 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final heightDevice = MediaQuery.of(context).size.height;
+    final widthDevice = MediaQuery.of(context).size.width;
     return Scaffold(
       /*appBar: AppBar(
         title: Text(widget.title),
@@ -73,12 +75,12 @@ class _MyHomePageState extends State<MyHomePage> {
           child: new Stack(children: [
             buildRow(),
             Positioned(
-              bottom: MediaQuery.of(context).size.height * 0.25 + 10,
+              bottom: heightDevice * 0.25 + 10,
               left: 20,
               child: Container(
                 color: Colors.blueGrey,
-                width: MediaQuery.of(context).size.width * 0.4,
-                height: MediaQuery.of(context).size.height * 0.25 - 40,
+                width: widthDevice * 0.4,
+                height: heightDevice * 0.25 - 40,
               ),
             ),
           ])
