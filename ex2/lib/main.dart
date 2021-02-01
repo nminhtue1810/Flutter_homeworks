@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   // Build the whole list of todo items
-  Widget _buildTodoList() {
+  Widget _buildToDoList() {
     return ListView.builder(
       itemBuilder: _buildToDoItem,
       itemCount: _todoList.length,
@@ -106,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: _buildTodoList(),
+      body: _buildToDoList(),
       floatingActionButton: FloatingActionButton(
         onPressed: _pushAddToDoScreen,
         tooltip: 'Add an item',
